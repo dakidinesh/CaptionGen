@@ -142,8 +142,8 @@ export default function App() {
           onGenerate={handleGenerate}
         />
 
-        {/* Column 3 - Captions & Preview */}
-        <div className="w-full max-w-md sm:w-80 lg:h-[600px] flex-shrink-0 flex flex-col gap-3">
+        {/* Column 3 - Captions */}
+        <div className="w-full max-w-md sm:w-72 lg:w-80 lg:h-[600px] flex-shrink-0">
           <CaptionsList
             captions={captions}
             selectedCaption={selectedCaption}
@@ -151,15 +151,15 @@ export default function App() {
             isGenerating={isGenerating}
             onRegenerate={handleGenerate}
           />
+        </div>
 
-          {/* Instagram Preview */}
-          <div className="card rounded-xl p-3 flex items-center justify-center">
-            <InstagramPreview 
-              caption={captions[selectedCaption] || ''} 
-              imagePreview={imagePreview}
-              contentType={contentType}
-            />
-          </div>
+        {/* Column 4 - Instagram Preview */}
+        <div className="w-full max-w-md sm:w-56 lg:w-48 lg:h-[600px] flex-shrink-0 card rounded-xl p-3 flex items-center justify-center">
+          <InstagramPreview 
+            caption={captions[selectedCaption] || ''} 
+            imagePreview={imagePreview}
+            contentType={contentType}
+          />
         </div>
       </main>
 
@@ -197,8 +197,8 @@ export default function App() {
             Powered by Gemini AI
           </span>
         </a>
-        <p className="text-[11px] text-gray-500">
-          © 2024 <span className="font-medium text-gray-700">Dinesh Daki</span>
+        <p className="text-xs sm:text-sm text-gray-500">
+          © 2024 <span className="font-semibold text-gray-800">Dinesh Daki</span>
         </p>
       </footer>
 

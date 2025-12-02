@@ -18,8 +18,8 @@ export default function CaptionsList({
   }
 
   return (
-    <div className="flex-1 card rounded-xl p-3 overflow-hidden">
-      <div className="flex items-center justify-between mb-2">
+    <div className="h-full card rounded-xl p-3 overflow-hidden flex flex-col">
+      <div className="flex items-center justify-between mb-2 flex-shrink-0">
         <span className="text-xs font-semibold text-gray-800">Captions</span>
         {captions.length > 0 && (
           <button 
@@ -30,7 +30,7 @@ export default function CaptionsList({
           </button>
         )}
       </div>
-      <div className="overflow-y-auto scroll-area space-y-2 max-h-[250px] sm:max-h-[220px] lg:max-h-[280px]">
+      <div className="overflow-y-auto scroll-area space-y-2 flex-1">
         <AnimatePresence mode="wait">
           {isGenerating ? (
             <motion.div 

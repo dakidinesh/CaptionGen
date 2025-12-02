@@ -2,7 +2,7 @@ import { Heart, MessageCircle, Send, Bookmark, MoreHorizontal, ImagePlus } from 
 
 function StoryPreview({ caption, imagePreview }) {
   return (
-    <div className="bg-black rounded-xl overflow-hidden shadow-lg w-full" style={{ aspectRatio: '9/16', maxHeight: '400px' }}>
+    <div className="bg-black rounded-xl overflow-hidden shadow-lg w-full" style={{ aspectRatio: '9/16', maxHeight: '500px' }}>
       <div className="relative w-full h-full">
         {/* Background */}
         {imagePreview ? (
@@ -41,7 +41,7 @@ function StoryPreview({ caption, imagePreview }) {
 
 function ReelPreview({ caption, imagePreview }) {
   return (
-    <div className="bg-black rounded-xl overflow-hidden shadow-lg w-full" style={{ aspectRatio: '9/16', maxHeight: '400px' }}>
+    <div className="bg-black rounded-xl overflow-hidden shadow-lg w-full" style={{ aspectRatio: '9/16', maxHeight: '500px' }}>
       <div className="relative w-full h-full">
         {/* Background */}
         {imagePreview ? (
@@ -51,7 +51,7 @@ function ReelPreview({ caption, imagePreview }) {
         )}
         
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/30" />
         
         {/* Header */}
         <div className="absolute top-2 left-2 right-2 flex items-center gap-1.5">
@@ -60,23 +60,23 @@ function ReelPreview({ caption, imagePreview }) {
         </div>
         
         {/* Reel UI */}
-        <div className="absolute right-2 bottom-12 flex flex-col items-center gap-2">
+        <div className="absolute right-1.5 bottom-20 flex flex-col items-center gap-1.5">
           <div className="flex flex-col items-center">
-            <Heart className="w-4 h-4 text-white" />
-            <span className="text-white text-[7px]">12.5K</span>
+            <Heart className="w-3.5 h-3.5 text-white" />
+            <span className="text-white text-[6px]">12.5K</span>
           </div>
           <div className="flex flex-col items-center">
-            <MessageCircle className="w-4 h-4 text-white" />
-            <span className="text-white text-[7px]">234</span>
+            <MessageCircle className="w-3.5 h-3.5 text-white" />
+            <span className="text-white text-[6px]">234</span>
           </div>
-          <Send className="w-4 h-4 text-white" />
-          <Bookmark className="w-4 h-4 text-white" />
+          <Send className="w-3.5 h-3.5 text-white" />
+          <Bookmark className="w-3.5 h-3.5 text-white" />
         </div>
         
         {/* Caption */}
-        <div className="absolute bottom-2 left-2 right-10 max-h-20 sm:max-h-16 overflow-y-auto scroll-area">
-          <p className="text-white text-[9px] sm:text-[8px] font-semibold mb-0.5">your_username</p>
-          <p className="text-white text-[8px] sm:text-[7px] leading-relaxed">
+        <div className="absolute bottom-2 left-2 right-8 max-h-28 overflow-y-auto scroll-area">
+          <p className="text-white text-[8px] font-semibold mb-0.5">your_username</p>
+          <p className="text-white text-[7px] leading-relaxed">
             {caption || 'Your caption here...'}
           </p>
         </div>
