@@ -48,3 +48,4 @@ export const LENGTHS = [
 
 export const STORAGE_KEY = 'captiongen_api_key'
 
+
