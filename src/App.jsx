@@ -106,7 +106,7 @@ export default function App() {
       <Header onSettingsClick={() => setShowSettings(true)} />
 
       {/* Main Content */}
-      <main className="flex-1 flex flex-col lg:flex-row justify-center items-center p-4 gap-4 lg:gap-5 overflow-y-auto lg:overflow-visible">
+      <main className="flex-1 flex flex-col lg:flex-row justify-center items-stretch lg:items-center px-3 sm:px-4 py-4 gap-3 sm:gap-4 lg:gap-5 overflow-y-auto lg:overflow-visible">
         
         {/* Column 1 - Image, Context, Type, Niche */}
         <InputPanel
@@ -143,7 +143,7 @@ export default function App() {
         />
 
         {/* Column 3 - Captions & Preview */}
-        <div className="w-full sm:w-80 lg:h-[600px] flex-shrink-0 flex flex-col gap-3">
+        <div className="w-full max-w-md sm:w-80 lg:h-[600px] flex-shrink-0 flex flex-col gap-3">
           <CaptionsList
             captions={captions}
             selectedCaption={selectedCaption}
@@ -164,7 +164,7 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="flex-shrink-0 py-3 flex flex-col items-center gap-2">
+      <footer className="flex-shrink-0 py-2 sm:py-3 flex flex-col items-center gap-1.5 sm:gap-2">
         <a 
           href="https://ai.google.dev/" 
           target="_blank" 

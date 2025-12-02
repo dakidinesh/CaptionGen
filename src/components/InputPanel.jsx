@@ -15,7 +15,7 @@ export default function InputPanel({
   setNiche,
 }) {
   return (
-    <div className="w-full sm:w-80 lg:h-[600px] flex-shrink-0 flex flex-col gap-3 overflow-y-auto scroll-area">
+    <div className="w-full max-w-md sm:w-80 lg:h-[600px] flex-shrink-0 flex flex-col gap-3 overflow-y-auto scroll-area">
       {/* Image Upload */}
       <div className="card rounded-xl p-3">
         <div className="text-[10px] font-semibold text-gray-600 uppercase tracking-wider mb-1">

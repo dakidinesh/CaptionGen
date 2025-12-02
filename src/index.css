@@ -9,7 +9,19 @@
 }
 
 html {
-  font-size: 110%;
+  font-size: 100%;
+}
+
+@media (min-width: 640px) {
+  html {
+    font-size: 105%;
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 110%;
+  }
 }
 
 html, body, #root {

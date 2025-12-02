@@ -40,11 +40,11 @@ function StoryReelPreview({ caption, imagePreview, contentType }) {
         )}
         
         {/* Caption */}
-        <div className="absolute bottom-2 left-2 right-8">
+        <div className="absolute bottom-2 left-2 right-8 max-h-20 sm:max-h-16 overflow-y-auto scroll-area">
           {contentType === 'reel' && (
-            <p className="text-white text-[8px] font-semibold mb-0.5">your_username</p>
+            <p className="text-white text-[9px] sm:text-[8px] font-semibold mb-0.5">your_username</p>
           )}
-          <p className="text-white text-[7px] leading-relaxed line-clamp-2">
+          <p className="text-white text-[8px] sm:text-[7px] leading-relaxed">
             {caption || (contentType === 'story' ? 'Tap to add text...' : 'Your caption here...')}
           </p>
         </div>
@@ -96,9 +96,9 @@ function PostPreview({ caption, imagePreview }) {
         </div>
         
         {/* Caption */}
-        <div className="text-[8px] leading-relaxed">
+        <div className="text-[9px] sm:text-[8px] leading-relaxed max-h-24 sm:max-h-16 overflow-y-auto scroll-area">
           <span className="font-semibold text-gray-900">your_username </span>
-          <span className="text-gray-700 whitespace-pre-wrap line-clamp-2">{caption || 'Your caption here...'}</span>
+          <span className="text-gray-700 whitespace-pre-wrap">{caption || 'Your caption here...'}</span>
         </div>
       </div>
     </div>

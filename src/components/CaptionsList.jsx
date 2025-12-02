@@ -30,7 +30,7 @@ export default function CaptionsList({
           </button>
         )}
       </div>
-      <div className="overflow-y-auto scroll-area space-y-2 max-h-[180px] lg:max-h-[220px]">
+      <div className="overflow-y-auto scroll-area space-y-2 max-h-[250px] sm:max-h-[220px] lg:max-h-[280px]">
         <AnimatePresence mode="wait">
           {isGenerating ? (
             <motion.div 
@@ -65,11 +65,11 @@ export default function CaptionsList({
                       <span className={`inline-block px-1.5 py-0.5 rounded text-[9px] font-bold mb-1 ${selectedCaption === i ? 'text-violet-600 bg-violet-100' : 'text-gray-500 bg-gray-100'}`}>
                         {i + 1}
                       </span>
-                      <p className="text-[10px] text-gray-700 leading-relaxed line-clamp-2">{caption}</p>
+                      <p className={`text-[11px] sm:text-[10px] text-gray-700 leading-relaxed ${selectedCaption === i ? 'max-h-32 sm:max-h-24 overflow-y-auto scroll-area' : 'line-clamp-3 sm:line-clamp-2'}`}>{caption}</p>
                     </div>
                     <button 
                       onClick={(e) => { e.stopPropagation(); copyToClipboard(caption, i) }} 
-                      className="p-1 rounded hover:bg-gray-100"
+                      className="p-1 rounded hover:bg-gray-100 flex-shrink-0"
                     >
                       {copiedIndex === i ? (
                         <Check className="w-3 h-3 text-green-500" />
