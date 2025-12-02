@@ -154,7 +154,7 @@ export default function App() {
         </div>
 
         {/* Column 4 - Instagram Preview */}
-        <div className="w-full max-w-md sm:w-56 lg:w-48 lg:h-[600px] flex-shrink-0 card rounded-xl p-3 flex items-center justify-center">
+        <div className="w-full max-w-md sm:w-56 lg:w-64 xl:w-72 lg:h-[600px] flex-shrink-0 card rounded-xl p-3 flex items-center justify-center">
           <InstagramPreview 
             caption={captions[selectedCaption] || ''} 
             imagePreview={imagePreview}
