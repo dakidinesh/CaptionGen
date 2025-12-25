@@ -71,7 +71,6 @@ CaptionGen leverages Google's **Gemini 2.0 Flash** model to analyze images and g
 ### 🌐 API Integration
 
 ```javascript
-// Gemini API Request Flow
 ┌──────────────┐     ┌───────────────────┐     ┌──────────────┐
 │ User Input   │────▶│ Prompt Assembly   │────▶│ Gemini API   │
 │ • Image      │     │ • System context  │     │ • Inference  │
@@ -111,41 +110,6 @@ CaptionGen leverages Google's **Gemini 2.0 Flash** model to analyze images and g
 │                   Google Gemini API                      │
 │              (Image Analysis + Text Gen)                 │
 └─────────────────────────────────────────────────────────┘
-```
-
----
-
-## 📁 Project Structure
-
-```
-CaptionGen/
-├── public/
-│   └── favicon.svg              # App icon
-├── src/
-│   ├── components/
-│   │   ├── index.js             # Component exports
-│   │   ├── BackgroundDecorations.jsx
-│   │   ├── CaptionsList.jsx     # Generated captions display
-│   │   ├── Header.jsx           # App header with logo
-│   │   ├── ImageUpload.jsx      # Drag & drop image upload
-│   │   ├── InputPanel.jsx       # Image, context, type, niche inputs
-│   │   ├── InstagramPreview.jsx # Live IG preview (Post/Story/Reel)
-│   │   ├── OptionsPanel.jsx     # Tone, audience, length settings
-│   │   └── SettingsModal.jsx    # API key configuration
-│   ├── constants/
-│   │   └── index.js             # App constants (tones, niches, etc.)
-│   ├── hooks/
-│   │   ├── index.js             # Hook exports
-│   │   └── useCaptionGenerator.js # Caption generation logic
-│   ├── App.jsx                  # Main application component
-│   ├── main.jsx                 # React entry point
-│   └── index.css                # Global styles & Tailwind
-├── index.html                   # HTML template
-├── package.json                 # Dependencies & scripts
-├── vite.config.js               # Vite configuration
-├── tailwind.config.js           # Tailwind customization
-├── postcss.config.js            # PostCSS plugins
-└── README.md
 ```
 
 ---
